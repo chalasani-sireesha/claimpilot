@@ -1,0 +1,105 @@
+from dotenv import load_dotenv
+
+load_dotenv()
+
+from claims.ai_extractor import ai_extract_fnol_fields
+
+
+sample_text = """
+FIRST NOTICE OF LOSS
+
+Policy Number: POL-2026-00125
+
+Policyholder Name: Ravi Kumar
+
+Effective Start Date: 01/01/2026
+
+Effective End Date: 31/12/2026
+
+Incident Date: 20/09/2026
+
+Incident Time: 10:30 AM
+
+Location: Bengaluru, Karnataka
+
+Description:
+The insured vehicle was involved in an accident near
+Electronic City. The front bumper and headlights were damaged.
+
+Claimant: Ravi Kumar
+
+Third Parties: None
+
+Contact Details: 9876543210
+
+Asset Type: Car
+
+Asset ID: KA01AB1234
+
+Estimated Damage: 18500
+
+Claim Type: Vehicle
+
+Attachments: Accident photographs, driving license
+
+Initial Estimate: 18000
+"""
+
+from claims.ai_extractor import ai_extract_fnol_fields
+
+
+sample_text = """
+FIRST NOTICE OF LOSS
+
+Policy Number: POL-2026-00125
+
+Policyholder Name: Ravi Kumar
+
+Effective Start Date: 01/01/2026
+
+Effective End Date: 31/12/2026
+
+Incident Date: 20/09/2026
+
+Incident Time: 10:30 AM
+
+Location: Bengaluru, Karnataka
+
+Description:
+The insured vehicle was involved in an accident near
+Electronic City. The front bumper and headlights were damaged.
+
+Claimant: Ravi Kumar
+
+Third Parties: None
+
+Contact Details: 9876543210
+
+Asset Type: Car
+
+Asset ID: KA01AB1234
+
+Estimated Damage: 18500
+
+Claim Type: Vehicle
+
+Attachments: Accident photographs, driving license
+
+Initial Estimate: 18000
+"""
+
+
+result = ai_extract_fnol_fields(
+    sample_text
+)
+
+print("\nAI EXTRACTION RESULT:\n")
+
+print(result)
+result = ai_extract_fnol_fields(
+    sample_text
+)
+
+print("\nAI EXTRACTION RESULT:\n")
+
+print(result)

@@ -1,0 +1,37 @@
+FIRST NOTICE OF LOSS
+
+Policy Number: POL-2026-00129
+
+Policyholder Name: Meena Rao
+
+Effective Start Date: 01/01/2026
+
+Effective End Date: 31/12/2026
+
+Incident Date: 25/09/2026
+
+Incident Time: 09:45 AM
+
+Location: Bengaluru, Karnataka
+
+Description:
+The insured vehicle was involved in a major accident.
+The vehicle requires significant repairs.
+
+Claimant: Meena Rao
+
+Third Parties: None
+
+Contact Details: 9876543214
+
+Asset Type: Car
+
+Asset ID: KA04GH3456
+
+Estimated Damage: 75000
+
+Claim Type: Vehicle
+
+Attachments: Accident photographs, repair estimate
+
+Initial Estimate: 75000

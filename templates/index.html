@@ -1,0 +1,325 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ClaimPilot</title>
+
+    {% load static %}
+
+    <link
+        rel="stylesheet"
+        href="{% static 'css/style.css' %}"
+    >
+
+</head>
+
+
+<body>
+    {% csrf_token %}
+
+<div class="container">
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div>
+
+            <h1>ClaimPilot</h1>
+
+            <p>
+                Autonomous Insurance Claims Processing Agent
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- UPLOAD -->
+
+    <section class="upload-card">
+
+        <h2>Process FNOL Document</h2>
+
+        <p>
+            Upload a First Notice of Loss document
+            in PDF or TXT format.
+        </p>
+
+
+        <form id="claimForm">
+
+            <input
+                type="file"
+                id="document"
+                name="document"
+                accept=".pdf,.txt"
+                required
+            >
+
+
+            <button type="submit">
+                Process Claim
+            </button>
+
+        </form>
+
+
+        <p id="status"></p>
+
+    </section>
+
+
+
+    <!-- RESULTS -->
+
+    <section
+        id="results"
+        class="results"
+    >
+
+
+        <h2>Claim Processing Result</h2>
+
+
+
+        <!-- ROUTE -->
+
+        <div class="route-card">
+
+            <h3>Recommended Route</h3>
+
+            <div
+                id="recommendedRoute"
+                class="route-value"
+            >
+                -
+            </div>
+
+        </div>
+
+
+
+        <!-- SUMMARY -->
+
+        <div class="info-grid">
+
+
+            <div class="info-card">
+
+                <h3>
+                    Claim Classification
+                </h3>
+
+                <p id="claimClassification">
+                    -
+                </p>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <h3>
+                    Investigation Flag
+                </h3>
+
+                <p id="investigationFlag">
+                    -
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- EXTRACTED FIELDS -->
+
+        <div class="data-card">
+
+            <h3>Extracted Fields</h3>
+
+            <pre id="extractedFields">-</pre>
+
+        </div>
+
+
+
+        <!-- VALIDATION -->
+
+        <div class="validation-grid">
+
+
+            <div class="data-card">
+
+                <h3>Missing Fields</h3>
+
+                <ul id="missingFields">
+                </ul>
+
+            </div>
+
+
+
+            <div class="data-card">
+
+                <h3>Inconsistencies</h3>
+
+                <ul id="inconsistencies">
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- REASONING -->
+
+        <div class="reasoning-card">
+
+            <h3>Why this route?</h3>
+
+            <p id="reasoning">
+                -
+            </p>
+
+        </div>
+
+
+
+        <!-- JSON -->
+
+        <div class="data-card">
+
+            <h3>Processing JSON</h3>
+
+            <pre id="jsonResult">-</pre>
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+<!-- CLAIM HISTORY -->
+<!-- STATISTICS -->
+
+<section class="stats-section">
+
+    <div class="stat-card">
+        <h3>Total Claims</h3>
+        <p id="totalClaims">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Fast-track</h3>
+        <p id="fastTrack">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Manual Review</h3>
+        <p id="manualReview">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Investigation</h3>
+        <p id="investigation">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Specialist</h3>
+        <p id="specialist">0</p>
+    </div>
+
+</section>
+
+<section class="history-card">
+
+    <div class="history-header">
+
+        <div>
+            <h2>Claim Processing History</h2>
+
+            <p>
+                Previously processed insurance claims
+            </p>
+        </div>
+
+        <button
+            type="button"
+            id="refreshHistory"
+            class="secondary-button"
+        >
+            Refresh
+        </button>
+
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Policy Number</th>
+
+                    <th>Claim Type</th>
+
+                    <th>Damage</th>
+
+                    <th>Route</th>
+
+                    <th>Investigation</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="claimHistory">
+
+                <tr>
+
+                    <td colspan="6">
+                        No claims loaded.
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>

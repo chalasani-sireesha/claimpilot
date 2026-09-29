@@ -1,0 +1,37 @@
+FIRST NOTICE OF LOSS
+
+Policy Number: POL-2026-00127
+
+Policyholder Name: Priya Sharma
+
+Effective Start Date: 01/01/2026
+
+Effective End Date: 31/12/2026
+
+Incident Date: 23/09/2026
+
+Incident Time: 04:30 PM
+
+Location: Bengaluru, Karnataka
+
+Description:
+The insured person was involved in an accident
+and suffered injuries.
+
+Claimant: Priya Sharma
+
+Third Parties: None
+
+Contact Details: 9876543212
+
+Asset Type: Person
+
+Asset ID: PERSON-127
+
+Estimated Damage: 10000
+
+Claim Type: Injury
+
+Attachments: Medical report
+
+Initial Estimate: 10000
